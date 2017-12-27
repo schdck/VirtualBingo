@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Controls.MenuButton.xaml" />
+        <ResourceDictionary Source="Controls.QuestionDisplayer.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

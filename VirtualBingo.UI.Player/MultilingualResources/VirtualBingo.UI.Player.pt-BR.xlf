@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="pt-BR" original="VIRTUALBINGO.UI.PLAYER/PROPERTIES/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6810.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="VIRTUALBINGO.UI.PLAYER/PROPERTIES/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="MAIN_UnknownVersion" translate="yes" xml:space="preserve">
+          <source>Unknown version</source>
+          <target state="final">Versão desconhecida</target>
+        </trans-unit>
+        <trans-unit id="MENU_GenerateCards" translate="yes" xml:space="preserve">
+          <source>Generate cards</source>
+          <target state="final">Gerar cartelas</target>
+        </trans-unit>
+        <trans-unit id="MENU_GenerateCardsMessage" translate="yes" xml:space="preserve">
+          <source>Generate cards for an existing game</source>
+          <target state="final">Gerar cartelas para um jogo existente</target>
+        </trans-unit>
+        <trans-unit id="MENU_Help" translate="yes" xml:space="preserve">
+          <source>Help</source>
+          <target state="final" state-qualifier="tm-suggestion">Ajuda</target>
+        </trans-unit>
+        <trans-unit id="MENU_HelpMessage" translate="yes" xml:space="preserve">
+          <source>Get help for this application</source>
+          <target state="final">Obter ajuda para esta aplicação</target>
+        </trans-unit>
+        <trans-unit id="MENU_Play" translate="yes" xml:space="preserve">
+          <source>Play</source>
+          <target state="final">Jogar</target>
+        </trans-unit>
+        <trans-unit id="MENU_PlayMessage" translate="yes" xml:space="preserve">
+          <source>Start new game</source>
+          <target state="final">Iniciar um novo jogo</target>
+        </trans-unit>
+        <trans-unit id="MENU_Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="final" state-qualifier="tm-suggestion">Configurações</target>
+        </trans-unit>
+        <trans-unit id="MENU_SettingsMessage" translate="yes" xml:space="preserve">
+          <source>Change application settings</source>
+          <target state="final">Alterar as configurações do aplicativo</target>
+        </trans-unit>
+        <trans-unit id="MENU_CreateGame" translate="yes" xml:space="preserve">
+          <source>Create game</source>
+          <target state="final">Criar jogo</target>
+        </trans-unit>
+        <trans-unit id="MENU_CreateGameMessage" translate="yes" xml:space="preserve">
+          <source>Create new game</source>
+          <target state="final">Criar um novo jogo</target>
+        </trans-unit>
+        <trans-unit id="MENU_Explore" translate="yes" xml:space="preserve">
+          <source>Explore</source>
+          <target state="final">Explorar</target>
+        </trans-unit>
+        <trans-unit id="MENU_ExploreMessage" translate="yes" xml:space="preserve">
+          <source>SOON</source>
+          <target state="final">EM BREVE</target>
+        </trans-unit>
+        <trans-unit id="HEADER_Menu" translate="yes" xml:space="preserve">
+          <source>VIRTUAL BINGO</source>
+          <target state="final">VIRTUAL BINGO</target>
+        </trans-unit>
+        <trans-unit id="HEADER_CreateGame" translate="yes" xml:space="preserve">
+          <source>CREATE GAME</source>
+          <target state="final">CRIAR UM JOGO</target>
+        </trans-unit>
+        <trans-unit id="HEADER_Explore" translate="yes" xml:space="preserve">
+          <source>EXPLORE</source>
+          <target state="final">EXPLORAR</target>
+        </trans-unit>
+        <trans-unit id="HEADER_Help" translate="yes" xml:space="preserve">
+          <source>HELP</source>
+          <target state="final">AJUDA</target>
+        </trans-unit>
+        <trans-unit id="HEADER_Settings" translate="yes" xml:space="preserve">
+          <source>SETTINGS</source>
+          <target state="final">CONFIGURAÇÕES</target>
+        </trans-unit>
+        <trans-unit id="HEADER_Game" translate="yes" xml:space="preserve">
+          <source>GAME#</source>
+          <target state="final">JOGO#</target>
+        </trans-unit>
+        <trans-unit id="HEADER_Play" translate="yes" xml:space="preserve">
+          <source>PLAY</source>
+          <target state="final">JOGAR</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_AddQuestion" translate="yes" xml:space="preserve">
+          <source>Add question</source>
+          <target state="final">Adicionar questão</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_CheckIfNecessary" translate="yes" xml:space="preserve">
+          <source>Check this if the image is necessary to understand the question</source>
+          <target state="final">Marque esta opções se a imagem for necessária para entender a questão</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_LanguageOfTheGame" translate="yes" xml:space="preserve">
+          <source>Language of the game</source>
+          <target state="final">Idioma do jogo</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_SubjectOfTheGame" translate="yes" xml:space="preserve">
+          <source>Subject of the game</source>
+          <target state="final">Matéria do jogo</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_TopicOfTheGame" translate="yes" xml:space="preserve">
+          <source>Topic of the game</source>
+          <target state="final">Assunto do jogo</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_QuestionAnswer" translate="yes" xml:space="preserve">
+          <source>Question answer</source>
+          <target state="final">Resposta da questão</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_QuestionAnswerImagePath" translate="yes" xml:space="preserve">
+          <source>Question answer image path</source>
+          <target state="final">Caminho para a imagem da resposta</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_QuestionTitle" translate="yes" xml:space="preserve">
+          <source>Question title</source>
+          <target state="final">Título da questão</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_QuestionTitleImagePath" translate="yes" xml:space="preserve">
+          <source>Question title image path</source>
+          <target state="final">Caminho para a imagem do título</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_AddedQuestions" translate="yes" xml:space="preserve">
+          <source>Added questions</source>
+          <target state="final">Questões adicionadas</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_Answer" translate="yes" xml:space="preserve">
+          <source>Answer: </source>
+          <target state="final">Resposta: </target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_AnswerImage" translate="yes" xml:space="preserve">
+          <source>Answer image: </source>
+          <target state="final">Imagem da resposta: </target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_ImageRequired" translate="yes" xml:space="preserve">
+          <source>Image required: </source>
+          <target state="final">Imagem necessária: </target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_Title" translate="yes" xml:space="preserve">
+          <source>Title: </source>
+          <target state="final">Título: </target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_TitleImage" translate="yes" xml:space="preserve">
+          <source>Title image: </source>
+          <target state="final">Imagem do título: </target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_CAPS_AddQuestion" translate="yes" xml:space="preserve">
+          <source>ADD QUESTION</source>
+          <target state="final">ADICIONAR QUESTÃO</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_ErrorAddingQuestion" translate="yes" xml:space="preserve">
+          <source>Insert at least a title or title image and an answer or answer image</source>
+          <target state="final">Insira pelo menos um título ou imagem do título e uma resposta ou imagem da resposta</target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_ErrorCreatingGame" translate="yes" xml:space="preserve">
+          <source></source>
+          <target state="new"></target>
+        </trans-unit>
+        <trans-unit id="CREATE_GAME_AuthorOfTheGame" translate="yes" xml:space="preserve">
+          <source>Game author</source>
+          <target state="final">Autor do jogo</target>
+        </trans-unit>
+        <trans-unit id="PLAY_PreviousQuestion" translate="yes" xml:space="preserve">
+          <source>PREVIOUS QUESTION</source>
+          <target state="final">QUESTÃO ANTERIOR</target>
+        </trans-unit>
+        <trans-unit id="PLAY_CurrentQuestion" translate="yes" xml:space="preserve">
+          <source>CURRENT QUESTION</source>
+          <target state="final">QUESTÃO ATUAL</target>
+        </trans-unit>
+        <trans-unit id="PLAY_OpenAnswersWindow" translate="yes" xml:space="preserve">
+          <source>Open answers window for this game</source>
+          <target state="final">Abrir janela das respostas deste jogo</target>
+        </trans-unit>
+        <trans-unit id="PLAY_Mute" translate="yes" xml:space="preserve">
+          <source>Click here to enable the 'Narrate Question Title' setting</source>
+          <target state="final">Clique aqui para habilitar a configuração "Narrar título da questão"</target>
+        </trans-unit>
+        <trans-unit id="PLAY_Unmute" translate="yes" xml:space="preserve">
+          <source>Click here to disable the 'Narrate Question Title' setting</source>
+          <target state="final">Clique aqui para desabilitar a configuração "Narrar título da questão"</target>
+        </trans-unit>
+        <trans-unit id="PLAY_EndGame" translate="yes" xml:space="preserve">
+          <source>End game and return</source>
+          <target state="final">Terminar o jogo e retornar</target>
+        </trans-unit>
+        <trans-unit id="START_GAME_FilterOptions" translate="yes" xml:space="preserve">
+          <source>Filter options</source>
+          <target state="final">Opções de filtro</target>
+        </trans-unit>
+        <trans-unit id="START_GAME_ReloadAvaliable" translate="yes" xml:space="preserve">
+          <source>Reload avaliable games and filter options</source>
+          <target state="final">Recarregar jogos e atualizar filtro</target>
+        </trans-unit>
+        <trans-unit id="START_GAME_Language" translate="yes" xml:space="preserve">
+          <source>Language:</source>
+          <target state="final">Idioma:</target>
+        </trans-unit>
+        <trans-unit id="START_GAME_Subject" translate="yes" xml:space="preserve">
+          <source>Subject:</source>
+          <target state="final">Disciplina:</target>
+        </trans-unit>
+        <trans-unit id="START_GAME_Topic" translate="yes" xml:space="preserve">
+          <source>Topic:</source>
+          <target state="final">Assunto:</target>
+        </trans-unit>
+        <trans-unit id="START_GAME_AvaliableGames" translate="yes" xml:space="preserve">
+          <source>Avaliable games</source>
+          <target state="final">Jogos disponíveis</target>
+        </trans-unit>
+        <trans-unit id="START_GAME_StartSelectedGame" translate="yes" xml:space="preserve">
+          <source>Start selected game</source>
+          <target state="final">Iniciar o jogo selecionado</target>
+        </trans-unit>
+        <trans-unit id="PLAY_NextQuestionTooltip" translate="yes" xml:space="preserve">
+          <source>Go to next question</source>
+          <target state="final">Ir para a próxima questão</target>
+        </trans-unit>
+        <trans-unit id="PLAY_PreviousQuestionTooltip" translate="yes" xml:space="preserve">
+          <source>Go to previous question</source>
+          <target state="final">Ir para a questão anterior</target>
+        </trans-unit>
+        <trans-unit id="HEADER_GenerateCards" translate="yes" xml:space="preserve">
+          <source>GENERATE CARDS</source>
+          <target state="final">GERAR CARTELAS</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_UnderConstruction" translate="yes" xml:space="preserve">
+          <source>This part of the application is under construction and should be avaliable soon.</source>
+          <target state="final">Esta parte do aplicativo está em construção e deve estar disponível em breve.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

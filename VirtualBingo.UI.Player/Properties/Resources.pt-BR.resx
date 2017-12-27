@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MAIN_UnknownVersion" xml:space="preserve">
+    <value>Versão desconhecida</value>
+  </data>
+  <data name="MENU_GenerateCards" xml:space="preserve">
+    <value>Gerar cartelas</value>
+  </data>
+  <data name="MENU_GenerateCardsMessage" xml:space="preserve">
+    <value>Gerar cartelas para um jogo existente</value>
+  </data>
+  <data name="MENU_Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="MENU_HelpMessage" xml:space="preserve">
+    <value>Obter ajuda para esta aplicação</value>
+  </data>
+  <data name="MENU_Play" xml:space="preserve">
+    <value>Jogar</value>
+  </data>
+  <data name="MENU_PlayMessage" xml:space="preserve">
+    <value>Iniciar um novo jogo</value>
+  </data>
+  <data name="MENU_Settings" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="MENU_SettingsMessage" xml:space="preserve">
+    <value>Alterar as configurações do aplicativo</value>
+  </data>
+  <data name="MENU_CreateGame" xml:space="preserve">
+    <value>Criar jogo</value>
+  </data>
+  <data name="MENU_CreateGameMessage" xml:space="preserve">
+    <value>Criar um novo jogo</value>
+  </data>
+  <data name="MENU_Explore" xml:space="preserve">
+    <value>Explorar</value>
+  </data>
+  <data name="MENU_ExploreMessage" xml:space="preserve">
+    <value>EM BREVE</value>
+  </data>
+  <data name="HEADER_Menu" xml:space="preserve">
+    <value>VIRTUAL BINGO</value>
+  </data>
+  <data name="HEADER_CreateGame" xml:space="preserve">
+    <value>CRIAR UM JOGO</value>
+  </data>
+  <data name="HEADER_Explore" xml:space="preserve">
+    <value>EXPLORAR</value>
+  </data>
+  <data name="HEADER_Help" xml:space="preserve">
+    <value>AJUDA</value>
+  </data>
+  <data name="HEADER_Settings" xml:space="preserve">
+    <value>CONFIGURAÇÕES</value>
+  </data>
+  <data name="HEADER_Game" xml:space="preserve">
+    <value>JOGO#</value>
+  </data>
+  <data name="HEADER_Play" xml:space="preserve">
+    <value>JOGAR</value>
+  </data>
+  <data name="CREATE_GAME_AddQuestion" xml:space="preserve">
+    <value>Adicionar questão</value>
+  </data>
+  <data name="CREATE_GAME_CheckIfNecessary" xml:space="preserve">
+    <value>Marque esta opções se a imagem for necessária para entender a questão</value>
+  </data>
+  <data name="CREATE_GAME_LanguageOfTheGame" xml:space="preserve">
+    <value>Idioma do jogo</value>
+  </data>
+  <data name="CREATE_GAME_SubjectOfTheGame" xml:space="preserve">
+    <value>Matéria do jogo</value>
+  </data>
+  <data name="CREATE_GAME_TopicOfTheGame" xml:space="preserve">
+    <value>Assunto do jogo</value>
+  </data>
+  <data name="GENERIC_QuestionAnswer" xml:space="preserve">
+    <value>Resposta da questão</value>
+  </data>
+  <data name="GENERIC_QuestionAnswerImagePath" xml:space="preserve">
+    <value>Caminho para a imagem da resposta</value>
+  </data>
+  <data name="GENERIC_QuestionTitle" xml:space="preserve">
+    <value>Título da questão</value>
+  </data>
+  <data name="GENERIC_QuestionTitleImagePath" xml:space="preserve">
+    <value>Caminho para a imagem do título</value>
+  </data>
+  <data name="CREATE_GAME_AddedQuestions" xml:space="preserve">
+    <value>Questões adicionadas</value>
+  </data>
+  <data name="CREATE_GAME_Answer" xml:space="preserve">
+    <value>Resposta: </value>
+  </data>
+  <data name="CREATE_GAME_AnswerImage" xml:space="preserve">
+    <value>Imagem da resposta: </value>
+  </data>
+  <data name="CREATE_GAME_ImageRequired" xml:space="preserve">
+    <value>Imagem necessária: </value>
+  </data>
+  <data name="CREATE_GAME_Title" xml:space="preserve">
+    <value>Título: </value>
+  </data>
+  <data name="CREATE_GAME_TitleImage" xml:space="preserve">
+    <value>Imagem do título: </value>
+  </data>
+  <data name="CREATE_GAME_CAPS_AddQuestion" xml:space="preserve">
+    <value>ADICIONAR QUESTÃO</value>
+  </data>
+  <data name="CREATE_GAME_ErrorAddingQuestion" xml:space="preserve">
+    <value>Insira pelo menos um título ou imagem do título e uma resposta ou imagem da resposta</value>
+  </data>
+  <data name="CREATE_GAME_AuthorOfTheGame" xml:space="preserve">
+    <value>Autor do jogo</value>
+  </data>
+  <data name="PLAY_PreviousQuestion" xml:space="preserve">
+    <value>QUESTÃO ANTERIOR</value>
+  </data>
+  <data name="PLAY_CurrentQuestion" xml:space="preserve">
+    <value>QUESTÃO ATUAL</value>
+  </data>
+  <data name="PLAY_OpenAnswersWindow" xml:space="preserve">
+    <value>Abrir janela das respostas deste jogo</value>
+  </data>
+  <data name="PLAY_Mute" xml:space="preserve">
+    <value>Clique aqui para habilitar a configuração "Narrar título da questão"</value>
+  </data>
+  <data name="PLAY_Unmute" xml:space="preserve">
+    <value>Clique aqui para desabilitar a configuração "Narrar título da questão"</value>
+  </data>
+  <data name="PLAY_EndGame" xml:space="preserve">
+    <value>Terminar o jogo e retornar</value>
+  </data>
+  <data name="START_GAME_FilterOptions" xml:space="preserve">
+    <value>Opções de filtro</value>
+  </data>
+  <data name="START_GAME_ReloadAvaliable" xml:space="preserve">
+    <value>Recarregar jogos e atualizar filtro</value>
+  </data>
+  <data name="START_GAME_Language" xml:space="preserve">
+    <value>Idioma:</value>
+  </data>
+  <data name="START_GAME_Subject" xml:space="preserve">
+    <value>Disciplina:</value>
+  </data>
+  <data name="START_GAME_Topic" xml:space="preserve">
+    <value>Assunto:</value>
+  </data>
+  <data name="START_GAME_AvaliableGames" xml:space="preserve">
+    <value>Jogos disponíveis</value>
+  </data>
+  <data name="START_GAME_StartSelectedGame" xml:space="preserve">
+    <value>Iniciar o jogo selecionado</value>
+  </data>
+  <data name="PLAY_NextQuestionTooltip" xml:space="preserve">
+    <value>Ir para a próxima questão</value>
+  </data>
+  <data name="PLAY_PreviousQuestionTooltip" xml:space="preserve">
+    <value>Ir para a questão anterior</value>
+  </data>
+  <data name="HEADER_GenerateCards" xml:space="preserve">
+    <value>GERAR CARTELAS</value>
+  </data>
+  <data name="GENERIC_UnderConstruction" xml:space="preserve">
+    <value>Esta parte do aplicativo está em construção e deve estar disponível em breve.</value>
+  </data>
+</root>

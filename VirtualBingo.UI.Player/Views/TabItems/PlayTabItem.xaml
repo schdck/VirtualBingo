@@ -1,0 +1,36 @@
+﻿<controls:MetroTabItem x:Class="VirtualBingo.UI.Player.Views.TabItems.PlayTabItem"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                       xmlns:p="clr-namespace:VirtualBingo.UI.Player.Properties"
+                       xmlns:pages="clr-namespace:VirtualBingo.UI.Player.Views.Pages"
+                       xmlns:enums="clr-namespace:VirtualBingo.UI.Shared.ENUMs;assembly=VirtualBingo.UI.Shared"
+                       mc:Ignorable="d" 
+                       Header="{x:Static p:Resources.HEADER_Play}"
+                       VerticalAlignment="Bottom"
+                       DataContext="{Binding PlayTabItem, Source={StaticResource Locator}}">
+
+    <Frame NavigationUIVisibility="Hidden">
+        <Frame.Style>
+            <Style TargetType="Frame">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <pages:StartGamePage />
+                    </Setter.Value>
+                </Setter>
+
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding PlayingState}" Value="{x:Static enums:PlayingState.Playing}">
+                        <Setter Property="Content">
+                            <Setter.Value>
+                                <pages:PlayPage />
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Frame.Style>
+    </Frame>
+</controls:MetroTabItem>

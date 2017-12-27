@@ -1,0 +1,26 @@
+﻿<Page x:Class="VirtualBingo.UI.Player.Views.Pages.HelpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VirtualBingo.UI.Player.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="515" d:DesignWidth="750"
+      Title="HelpPage">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    xmlns:p="clr-namespace:VirtualBingo.UI.Player.Properties"
+                    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks">
+
+            <iconPacks:PackIconModern Kind="TransitConstruction" 
+                                      Width="150" 
+                                      Height="150"
+                                      HorizontalAlignment="Center"
+                                      Margin="20"/>
+
+            <TextBlock Text="{x:Static p:Resources.GENERIC_UnderConstruction}" />
+        </StackPanel>
+    </Grid>
+</Page>

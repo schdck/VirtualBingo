@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MENU_GenerateCards" xml:space="preserve">
+    <value>Generate cards</value>
+  </data>
+  <data name="MENU_GenerateCardsMessage" xml:space="preserve">
+    <value>Generate cards for an existing game</value>
+  </data>
+  <data name="MENU_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MENU_HelpMessage" xml:space="preserve">
+    <value>Get help for this application</value>
+  </data>
+  <data name="MENU_Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="MENU_PlayMessage" xml:space="preserve">
+    <value>Start new game</value>
+  </data>
+  <data name="MENU_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MENU_SettingsMessage" xml:space="preserve">
+    <value>Change application settings</value>
+  </data>
+  <data name="MAIN_UnknownVersion" xml:space="preserve">
+    <value>Unknown version</value>
+  </data>
+  <data name="MENU_CreateGame" xml:space="preserve">
+    <value>Create game</value>
+  </data>
+  <data name="MENU_CreateGameMessage" xml:space="preserve">
+    <value>Create new game</value>
+  </data>
+  <data name="MENU_Explore" xml:space="preserve">
+    <value>Explore</value>
+  </data>
+  <data name="MENU_ExploreMessage" xml:space="preserve">
+    <value>SOON</value>
+  </data>
+  <data name="HEADER_Menu" xml:space="preserve">
+    <value>VIRTUAL BINGO</value>
+  </data>
+  <data name="HEADER_CreateGame" xml:space="preserve">
+    <value>CREATE GAME</value>
+  </data>
+  <data name="HEADER_Explore" xml:space="preserve">
+    <value>EXPLORE</value>
+  </data>
+  <data name="HEADER_Help" xml:space="preserve">
+    <value>HELP</value>
+  </data>
+  <data name="HEADER_Settings" xml:space="preserve">
+    <value>SETTINGS</value>
+  </data>
+  <data name="HEADER_Game" xml:space="preserve">
+    <value>GAME#</value>
+  </data>
+  <data name="HEADER_Play" xml:space="preserve">
+    <value>PLAY</value>
+  </data>
+  <data name="CREATE_GAME_AddedQuestions" xml:space="preserve">
+    <value>Added questions</value>
+  </data>
+  <data name="CREATE_GAME_AddQuestion" xml:space="preserve">
+    <value>Add question</value>
+  </data>
+  <data name="CREATE_GAME_Answer" xml:space="preserve">
+    <value>Answer: </value>
+  </data>
+  <data name="CREATE_GAME_AnswerImage" xml:space="preserve">
+    <value>Answer image: </value>
+  </data>
+  <data name="CREATE_GAME_CAPS_AddQuestion" xml:space="preserve">
+    <value>ADD QUESTION</value>
+  </data>
+  <data name="CREATE_GAME_CheckIfNecessary" xml:space="preserve">
+    <value>Check this if the image is necessary to understand the question</value>
+  </data>
+  <data name="CREATE_GAME_ErrorAddingQuestion" xml:space="preserve">
+    <value>Insert at least a title or title image and an answer or answer image</value>
+  </data>
+  <data name="CREATE_GAME_ImageRequired" xml:space="preserve">
+    <value>Image required: </value>
+  </data>
+  <data name="CREATE_GAME_LanguageOfTheGame" xml:space="preserve">
+    <value>Language of the game</value>
+  </data>
+  <data name="CREATE_GAME_SubjectOfTheGame" xml:space="preserve">
+    <value>Subject of the game</value>
+  </data>
+  <data name="CREATE_GAME_Title" xml:space="preserve">
+    <value>Title: </value>
+  </data>
+  <data name="CREATE_GAME_TitleImage" xml:space="preserve">
+    <value>Title image: </value>
+  </data>
+  <data name="CREATE_GAME_TopicOfTheGame" xml:space="preserve">
+    <value>Topic of the game</value>
+  </data>
+  <data name="GENERIC_QuestionAnswer" xml:space="preserve">
+    <value>Question answer</value>
+  </data>
+  <data name="GENERIC_QuestionAnswerImagePath" xml:space="preserve">
+    <value>Question answer image path</value>
+  </data>
+  <data name="GENERIC_QuestionTitle" xml:space="preserve">
+    <value>Question title</value>
+  </data>
+  <data name="GENERIC_QuestionTitleImagePath" xml:space="preserve">
+    <value>Question title image path</value>
+  </data>
+  <data name="CREATE_GAME_ErrorCreatingGame" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CREATE_GAME_AuthorOfTheGame" xml:space="preserve">
+    <value>Game author</value>
+  </data>
+  <data name="PLAY_CurrentQuestion" xml:space="preserve">
+    <value>CURRENT QUESTION</value>
+  </data>
+  <data name="PLAY_EndGame" xml:space="preserve">
+    <value>End game and return</value>
+  </data>
+  <data name="PLAY_Mute" xml:space="preserve">
+    <value>Click here to enable the 'Narrate Question Title' setting</value>
+  </data>
+  <data name="PLAY_NextQuestionTooltip" xml:space="preserve">
+    <value>Go to next question</value>
+  </data>
+  <data name="PLAY_OpenAnswersWindow" xml:space="preserve">
+    <value>Open answers window for this game</value>
+  </data>
+  <data name="PLAY_PreviousQuestion" xml:space="preserve">
+    <value>PREVIOUS QUESTION</value>
+  </data>
+  <data name="PLAY_PreviousQuestionTooltip" xml:space="preserve">
+    <value>Go to previous question</value>
+  </data>
+  <data name="PLAY_Unmute" xml:space="preserve">
+    <value>Click here to disable the 'Narrate Question Title' setting</value>
+  </data>
+  <data name="START_GAME_AvaliableGames" xml:space="preserve">
+    <value>Avaliable games</value>
+  </data>
+  <data name="START_GAME_FilterOptions" xml:space="preserve">
+    <value>Filter options</value>
+  </data>
+  <data name="START_GAME_Language" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="START_GAME_ReloadAvaliable" xml:space="preserve">
+    <value>Reload avaliable games and filter options</value>
+  </data>
+  <data name="START_GAME_StartSelectedGame" xml:space="preserve">
+    <value>Start selected game</value>
+  </data>
+  <data name="START_GAME_Subject" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="START_GAME_Topic" xml:space="preserve">
+    <value>Topic:</value>
+  </data>
+  <data name="HEADER_GenerateCards" xml:space="preserve">
+    <value>GENERATE CARDS</value>
+  </data>
+  <data name="GENERIC_UnderConstruction" xml:space="preserve">
+    <value>This part of the application is under construction and should be avaliable soon.</value>
+  </data>
+</root>

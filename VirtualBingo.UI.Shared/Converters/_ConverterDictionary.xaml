@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:VirtualBingo.UI.Shared.Converters">
+
+    <local:HeightToFontSizeForHeaderConverter x:Key="HeightToFontSizeForHeaderConverter" />
+    <local:HeightToFontSizeForTitleConverter x:Key="HeightToFontSizeForTitleConverter" />
+    <local:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
+    <local:PathToFileNameConverter x:Key="PathToFileNameConverter" />
+    <local:BooleanToVisibilityAlternativeConverter x:Key="BooleanToVisibilityAlternativeConverter" />
+    <local:NullToBooleanConverter x:Key="NullToBooleanConverter" />
+    <local:ReduceValueConverter x:Key="ReduceValueConverter" />
+    <local:IndexToNumberConverter x:Key="IndexToNumberConverter" />
+    <local:NullOrWhiteSpaceToBooleanConverter x:Key="NullOrWhiteSpaceToBooleanConverter" />
+
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+</ResourceDictionary>
