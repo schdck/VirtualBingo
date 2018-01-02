@@ -14,43 +14,47 @@ namespace VirtualBingo.Helpers
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        #region Settings
         public bool Settings_NarrateQuestionTitle
         {
-            get
-            {
-                return GetValue<bool>();
-            }
-            set
-            {
-                SetValue(value);
-            }
+            get => GetValue<bool>();
+            set => SetValue(value);
         }
 
         // Internal because GamesDirectoryHelper should be used instead
         internal string Settings_GamesDirectory
         {
-            get
-            {
-                return GetValue<string>();
-            }
-            set
-            {
-                SetValue(value);
-            }
+            get => GetValue<string>();
+            set => SetValue(value);
         }
 
         // Internal because GamesDirectoryHelper should be used instead
         internal string Settings_TemporaryDirectory
         {
-            get
-            {
-                return GetValue<string>();
-            }
-            set
-            {
-                SetValue(value);
-            }
+            get => GetValue<string>();
+            set => SetValue(value);
         }
+        #endregion
+
+        #region Preferences
+        public string Preferences_FilterSelectedLanguage
+        {
+            get => GetValue<string>();
+            set => SetValue(value);
+        }
+
+        public string Preferences_FilterSelectedSubject
+        {
+            get => GetValue<string>();
+            set => SetValue(value);
+        }
+
+        public string Preferences_FilterSelectedTopic
+        {
+            get => GetValue<string>();
+            set => SetValue(value);
+        }
+        #endregion
 
         public void Reset()
         {

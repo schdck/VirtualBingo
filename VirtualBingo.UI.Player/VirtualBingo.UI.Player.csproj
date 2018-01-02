@@ -91,6 +91,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Controls\GameChooser.cs" />
+    <Page Include="Views\Controls\Design\Controls.CardDisplayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\Design\Controls.GameChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Controls\Design\Controls.MenuButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,6 +200,7 @@
     <Compile Include="ViewModels\PlayViewModel.cs" />
     <Compile Include="ViewModels\StartGameViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="Views\Controls\CardDisplayer.cs" />
     <Compile Include="Views\Controls\QuestionDisplayer.cs" />
     <Compile Include="Views\Pages\CreateGamePage.xaml.cs">
       <DependentUpon>CreateGamePage.xaml</DependentUpon>
