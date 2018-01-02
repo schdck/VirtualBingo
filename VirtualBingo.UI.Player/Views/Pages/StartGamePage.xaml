@@ -18,7 +18,7 @@
                 Style="{DynamicResource SquareButtonStyle}"
                 Command="{Binding DataContext.LaunchGameCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}}"
                 CommandParameter="{Binding ElementName=GameChooser, Path=SelectedGame}"
-                IsEnabled="{Binding ElementName=ListView_AvaliableGames, Path=SelectedItem, Converter={StaticResource NullToBooleanConverter}}">
+                IsEnabled="{Binding ElementName=GameChooser, Path=SelectedGame, Converter={StaticResource NullToBooleanConverter}}">
 
             <StackPanel Orientation="Horizontal">
                 <iconPacks:PackIconEntypo Kind="ControllerPlay" Width="15" Height="12" />
