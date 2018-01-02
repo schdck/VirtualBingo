@@ -12,9 +12,6 @@
       DataContext="{Binding StartGame, Source={StaticResource Locator}}">
 
     <DockPanel VerticalAlignment="Top">
-        <controls:GameChooser x:Name="GameChooser"
-                              DockPanel.Dock="Top" />
-
         <Button DockPanel.Dock="Bottom"
                 BorderThickness="1"
                 BorderBrush="LightGray"
@@ -28,5 +25,8 @@
                 <TextBlock Text="{x:Static p:Resources.START_GAME_StartSelectedGame}" Margin="5 0" FontSize="10" />
             </StackPanel>
         </Button>
+
+        <controls:GameChooser x:Name="GameChooser"
+                              DockPanel.Dock="Top" />
     </DockPanel>
 </Page>
