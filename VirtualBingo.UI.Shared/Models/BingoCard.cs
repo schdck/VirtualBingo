@@ -9,7 +9,9 @@ namespace VirtualBingo.UI.Shared.Models
     {
         public List<BingoQuestion> _Questions;
 
+        #pragma warning disable CS0067
         public event PropertyChangedEventHandler PropertyChanged;
+        #pragma warning restore CS0067
 
         public int Id { get; private set; }
         public int MaxAmountOfQuestions { get; private set; }
