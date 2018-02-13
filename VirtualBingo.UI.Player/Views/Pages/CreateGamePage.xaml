@@ -145,63 +145,73 @@
             <ListView ItemsSource="{Binding AddedQuestions}"
                       BorderThickness="1"
                       BorderBrush="Gray"
-                      ScrollViewer.VerticalScrollBarVisibility="Visible">
+                      ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid Background="Transparent">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="40" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="5" />
                                 <RowDefinition Height="*" />
-                                <RowDefinition Height="5" />
                                 <RowDefinition Height="*" />
-                                <RowDefinition Height="5" />
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Row="1"
-                                        Grid.Column="0"
-                                        Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_Title}"
-                                           FontWeight="Bold" />
-                                <TextBlock Text="{Binding Title}" />
-                            </StackPanel>
+                            <UniformGrid Grid.Row="0"
+                                         Grid.Column="0"
+                                         Columns="2"
+                                         Margin="5 5 5 2.5">
 
-                            <StackPanel Grid.Row="1"
-                                        Grid.Column="1"
-                                        Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_TitleImage}"
-                                           FontWeight="Bold" />
-                                <TextBlock Text="{Binding TitleImagePath, Converter={StaticResource PathToFileNameConverter}}" />
-                            </StackPanel>
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Left"
+                                               Text="{x:Static p:Resources.CREATE_GAME_Title}"
+                                               FontWeight="Bold" />
+                                    <TextBlock DockPanel.Dock="Right"
+                                               Text="{Binding Title}" />
+                                </DockPanel>
 
-                            <StackPanel Grid.Row="1"
-                                        Grid.Column="2"
-                                        Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_ImageRequired}"
-                                           FontWeight="Bold" />
-                                <TextBlock Text="{Binding AlwaysDisplayTitleImage}" />
-                            </StackPanel>
+                                <DockPanel Margin="5 0 0 0">
+                                    <TextBlock DockPanel.Dock="Left"
+                                               Text="{x:Static p:Resources.CREATE_GAME_TitleImage}"
+                                               FontWeight="Bold" />
+                                    <TextBlock DockPanel.Dock="Right"
+                                               Text="{Binding TitleImagePath, Converter={StaticResource PathToFileNameConverter}}" />
+                                </DockPanel>
+                            </UniformGrid>
 
-                            <StackPanel Grid.Row="3"
-                                        Grid.Column="0"
-                                        Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_Answer}"
+                            <DockPanel Grid.Row="0"
+                                       Grid.Column="1"
+                                       Margin="5 5 40 5">
+                                <TextBlock DockPanel.Dock="Left"
+                                           Text="{x:Static p:Resources.CREATE_GAME_ImageRequired}"
                                            FontWeight="Bold" />
-                                <TextBlock Text="{Binding Answer}" />
-                            </StackPanel>
+                                <TextBlock DockPanel.Dock="Right"
+                                           Text="{Binding AlwaysDisplayTitleImage}" />
+                            </DockPanel>
 
-                            <StackPanel Grid.Row="3"
-                                        Grid.Column="1"
-                                        Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_AnswerImage}"
-                                           FontWeight="Bold" />
-                                <TextBlock Text="{Binding AnswerImagePath, Converter={StaticResource PathToFileNameConverter}}" />
-                            </StackPanel>
+                            <UniformGrid Grid.Row="1"
+                                         Grid.Column="0"
+                                         Columns="2"
+                                         Margin="5 2.5 5 5">
+
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Left"
+                                               Text="{x:Static p:Resources.CREATE_GAME_Answer}"
+                                               FontWeight="Bold" />
+                                    <TextBlock DockPanel.Dock="Right"
+                                               Text="{Binding Answer}" />
+                                </DockPanel>
+
+                                <DockPanel Margin="5 0 0 0">
+                                    <TextBlock DockPanel.Dock="Left"
+                                               Text="{x:Static p:Resources.CREATE_GAME_AnswerImage}"
+                                               FontWeight="Bold" />
+                                    <TextBlock DockPanel.Dock="Right"
+                                               Text="{Binding AnswerImagePath, Converter={StaticResource PathToFileNameConverter}}" />
+                                </DockPanel>
+                            </UniformGrid>
 
                             <Button x:Name="Button_Remove"
                                     Style="{DynamicResource MetroCircleButtonStyle}"
