@@ -5,48 +5,129 @@
 
     <ControlTemplate x:Key="Template_ImageOnly" TargetType="bingo_controls:QuestionDisplayer">
         <Grid>
-            <Viewbox>
-                <Image Source="{Binding Question.TitleImagePath, RelativeSource={RelativeSource TemplatedParent}}" />
-            </Viewbox>
+            <Rectangle x:Name="Rectangle_Background"
+                    Fill="{TemplateBinding Background}" />
+
+            <Border x:Name="Border"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+
+                <Grid Margin="5">
+                    <Viewbox>
+                        <Image>
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="{Binding Question.TitleImagePath, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=bingo_controls:QuestionDisplayer}, Path=DisplayAnswerInsteadOfTitle}" Value="True">
+                                            <Setter Property="Source" Value="{Binding Question.AnswerImagePath, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </Viewbox>
+                </Grid>
+            </Border>
         </Grid>
     </ControlTemplate>
 
     <ControlTemplate x:Key="Template_TextOnly" TargetType="bingo_controls:QuestionDisplayer">
         <Grid>
-            <Viewbox >
-                <!-- XXX
+            <Rectangle x:Name="Rectangle_Background"
+                       Fill="{TemplateBinding Background}" />
+
+            <Border x:Name="Border"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+
+                <Grid Margin="5">
+                    <Viewbox>
+                        <!-- XXX
                 
-                The converter used for the MaxWidth Binding is used to prevent text (when it's big) 
-                from obtaining infinite space inside ViewBox (and thus becoming impossible to read)
+                        The converter used for the MaxWidth Binding is used to prevent text (when it's big) 
+                        from obtaining infinite space inside ViewBox (and thus becoming impossible to read)
                 
-                I'm looking for alternatives to this.
+                        I'm looking for alternatives to this.
                 
-                Related: https://stackoverflow.com/q/47956496/5686352 
+                        Related: https://stackoverflow.com/q/47956496/5686352 
                 
-                -->
-                <TextBlock Text="{Binding Question.Title, RelativeSource={RelativeSource TemplatedParent}}"
-                           MaxWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=bingo_controls:QuestionDisplayer}, Path=ActualWidth, Converter={StaticResource ReduceValueConverter}}"
-                           TextWrapping="Wrap" />
-            </Viewbox>
+                        -->
+                        
+                        <TextBlock TextWrapping="Wrap"
+                                   MaxWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=bingo_controls:QuestionDisplayer}, Path=ActualWidth, Converter={StaticResource ReduceValueConverter}}">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Text" Value="{Binding Question.Title, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=bingo_controls:QuestionDisplayer}, Path=DisplayAnswerInsteadOfTitle}" Value="True">
+                                            <Setter Property="Text" Value="{Binding Question.Answer, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+            </Border>
         </Grid>
     </ControlTemplate>
 
     <ControlTemplate x:Key="Template_Both" TargetType="bingo_controls:QuestionDisplayer">
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="5" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+            <Rectangle x:Name="Rectangle_Background"
+                       Fill="{TemplateBinding Background}" />
 
-            <Viewbox Grid.Row="0">
-                <TextBlock Text="{Binding Question.Title, RelativeSource={RelativeSource TemplatedParent}}"
-                           TextWrapping="Wrap" />
-            </Viewbox>
+            <Border x:Name="Border"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
-            <Viewbox Grid.Row="2">
-                <Image Source="{Binding Question.TitleImagePath, RelativeSource={RelativeSource TemplatedParent}}" />
-            </Viewbox>
+                    <Viewbox Grid.Row="0">
+                        <TextBlock TextWrapping="Wrap"
+                                   MaxWidth="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=bingo_controls:QuestionDisplayer}, Path=ActualWidth, Converter={StaticResource ReduceValueConverter}}">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Text" Value="{Binding Question.Title, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=bingo_controls:QuestionDisplayer}, Path=DisplayAnswerInsteadOfTitle}" Value="True">
+                                            <Setter Property="Text" Value="{Binding Question.Answer, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Viewbox>
+
+                    <Viewbox Grid.Row="2">
+                        <Image>
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="{Binding Question.TitleImagePath, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=bingo_controls:QuestionDisplayer}, Path=DisplayAnswerInsteadOfTitle}" Value="True">
+                                            <Setter Property="Source" Value="{Binding Question.AnswerImagePath, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </Viewbox>
+                </Grid>
+            </Border>
         </Grid>
     </ControlTemplate>
 

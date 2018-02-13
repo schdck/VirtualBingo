@@ -3,5 +3,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Controls.MenuButton.xaml" />
         <ResourceDictionary Source="Controls.QuestionDisplayer.xaml" />
+        <ResourceDictionary Source="Controls.CardDisplayer.xaml" />
+        <ResourceDictionary Source="Controls.GameChooser.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

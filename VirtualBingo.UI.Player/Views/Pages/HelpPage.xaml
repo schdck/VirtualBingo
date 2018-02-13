@@ -8,7 +8,7 @@
       d:DesignHeight="515" d:DesignWidth="750"
       Title="HelpPage">
 
-    <Grid>
+    <Grid Margin="5">
         <StackPanel VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     xmlns:p="clr-namespace:VirtualBingo.UI.Player.Properties"

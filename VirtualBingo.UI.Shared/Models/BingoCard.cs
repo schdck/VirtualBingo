@@ -1,15 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 namespace VirtualBingo.UI.Shared.Models
 {
-    public class BingoCard
+    public class BingoCard : IEnumerable, INotifyPropertyChanged
     {
-        private List<BingoQuestion> _Questions;
+        public List<BingoQuestion> _Questions;
+
+        #pragma warning disable CS0067
+        public event PropertyChangedEventHandler PropertyChanged;
+        #pragma warning restore CS0067
 
         public int Id { get; private set; }
         public int MaxAmountOfQuestions { get; private set; }
-        public int Count => _Questions.Count;
+        public int QuestionCount => _Questions.Count;
 
         public BingoQuestion this[int index] { get => _Questions[index]; }
 
@@ -23,7 +29,7 @@ namespace VirtualBingo.UI.Shared.Models
 
         public void Add(BingoQuestion item)
         {
-            if (Count < MaxAmountOfQuestions)
+            if (QuestionCount < MaxAmountOfQuestions)
             {
                 _Questions.Add(item);
             }
@@ -46,15 +52,15 @@ namespace VirtualBingo.UI.Shared.Models
 
         public double CompareTo(BingoCard card)
         {
-            if(card.Count != Count)
+            if(card.QuestionCount != QuestionCount)
             {
                 return -1;
             }
 
-            return _Questions.Intersect(card._Questions).Count() / Count;
+            return _Questions.Intersect(card._Questions).Count() / QuestionCount;
         }
 
-        public IEnumerator<BingoQuestion> GetEnumerator()
+        public IEnumerator GetEnumerator()
         {
             return _Questions.GetEnumerator();
         }

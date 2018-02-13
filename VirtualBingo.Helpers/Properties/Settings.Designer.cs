@@ -58,5 +58,41 @@ namespace VirtualBingo.Helpers.Properties {
                 this["Settings_NarrateQuestionTitle"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Preferences_FilterSelectedLanguage {
+            get {
+                return ((string)(this["Preferences_FilterSelectedLanguage"]));
+            }
+            set {
+                this["Preferences_FilterSelectedLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Preferences_FilterSelectedSubject {
+            get {
+                return ((string)(this["Preferences_FilterSelectedSubject"]));
+            }
+            set {
+                this["Preferences_FilterSelectedSubject"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Preferences_FilterSelectedTopic {
+            get {
+                return ((string)(this["Preferences_FilterSelectedTopic"]));
+            }
+            set {
+                this["Preferences_FilterSelectedTopic"] = value;
+            }
+        }
     }
 }

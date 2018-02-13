@@ -230,6 +230,54 @@
           <source>This part of the application is under construction and should be avaliable soon.</source>
           <target state="final">Esta parte do aplicativo está em construção e deve estar disponível em breve.</target>
         </trans-unit>
+        <trans-unit id="GENERATE_CARDS_GenerateSelectedGame" translate="yes" xml:space="preserve">
+          <source>Generate cards for the selected game</source>
+          <target state="final">Gerar cartelas para o jogo selecionado</target>
+        </trans-unit>
+        <trans-unit id="GENERATE_CARDS_AmountOfCards" translate="yes" xml:space="preserve">
+          <source>Amount of cards</source>
+          <target state="final">Quantidade de cartelas</target>
+        </trans-unit>
+        <trans-unit id="GENERATE_CARDS_AmountOfQuestionsPerCard" translate="yes" xml:space="preserve">
+          <source>Amount of questions per card</source>
+          <target state="final">Quantidade de questões por cartela</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="final">Cancelar</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_Ok" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="final">Ok</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_ErrorLoadingGame" translate="yes" xml:space="preserve">
+          <source>An error ocurred while trying to load the select game.</source>
+          <target state="final">Um erro ocorreu enquanto tentávamos carregar o jogo selecionado</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_Success" translate="yes" xml:space="preserve">
+          <source>Success</source>
+          <target state="final">Sucesso</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_Error" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <target state="final">Erro</target>
+        </trans-unit>
+        <trans-unit id="GENERATE_CARDS_ErrorLoadingGame" translate="yes" xml:space="preserve">
+          <source>An error ocurred while trying to load the select game.
+
+To copy more information about the error and get help, use the copy to clipboard button.</source>
+          <target state="final">Um erro ocorreu enquanto tentávamos carregar o jogo selecionado.
+
+Para copiar mais informações sobre esse erro e obter ajuda, use o botão de copiar para o clipboard.</target>
+        </trans-unit>
+        <trans-unit id="GENERIC_FillNecessaryFields" translate="yes" xml:space="preserve">
+          <source>You must fill all necessary fields before continuing!</source>
+          <target state="final">Você deve preencher todos os campos antes de continuar!</target>
+        </trans-unit>
+        <trans-unit id="GENERATE_CARDS_SuccessGenerating" translate="yes" xml:space="preserve">
+          <source>Your cards were generated successfully!</source>
+          <target state="final">Suas cartelas foram geradas com sucesso!</target>
+        </trans-unit>
       </group>
     </body>
   </file>

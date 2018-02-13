@@ -54,6 +54,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="RendererHelper.cs" />
     <Compile Include="SettingsHelper.cs" />
     <Compile Include="SpeechHelper.cs" />
   </ItemGroup>

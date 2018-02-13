@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:VirtualBingo.UI.Player.Views.Controls"
+                    xmlns:model="clr-namespace:VirtualBingo.UI.Shared.Models;assembly=VirtualBingo.UI.Shared">
+
+    <Style TargetType="controls:CardDisplayer">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:CardDisplayer">
+                    <ItemsControl x:Name="Container"
+                                  ItemsSource="{TemplateBinding Card}" 
+                                  BorderBrush="Black" 
+                                  BorderThickness="1 1 0 0">
+                        
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Background="White"
+                                             Columns="{Binding AmountOfColumns, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:CardDisplayer}}}" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderThickness="0 0 1 1" 
+                                        BorderBrush="Black">
+                                    
+                                    <controls:QuestionDisplayer Question="{Binding}"  
+                                                                Margin="20"
+                                                                DisplayAnswerInsteadOfTitle="True" />
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        
+                    </ItemsControl>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

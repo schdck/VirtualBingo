@@ -13,11 +13,7 @@ namespace VirtualBingo.UI.Player.Views.Controls
 
         public static readonly DependencyProperty QuestionProperty = DependencyProperty.Register("Question", typeof(BingoQuestion), typeof(QuestionDisplayer), new PropertyMetadata(new PropertyChangedCallback(UpdateDisplayType)));
 
-        public BingoQuestion Question
-        {
-            get { return (BingoQuestion) GetValue(QuestionProperty); }
-            set { SetValue(QuestionProperty, value); }
-        }
+        public static readonly DependencyProperty DisplayAnswerInsteadOfTitleProperty = DependencyProperty.Register("DisplayAnswerInsteadOfTitle", typeof(bool), typeof(QuestionDisplayer), new PropertyMetadata(new PropertyChangedCallback(UpdateDisplayType)));
 
         public QuestionDisplayerPossibilities DisplayType
         {
@@ -25,26 +21,39 @@ namespace VirtualBingo.UI.Player.Views.Controls
             protected set { SetValue(DisplayTypeProperty, value); }
         }
 
+        public BingoQuestion Question
+        {
+            get { return (BingoQuestion) GetValue(QuestionProperty); }
+            set { SetValue(QuestionProperty, value); }
+        }
+
+        public bool DisplayAnswerInsteadOfTitle
+        {
+            get { return (bool)GetValue(DisplayAnswerInsteadOfTitleProperty); }
+            set { SetValue(DisplayAnswerInsteadOfTitleProperty, value); }
+        }
+
         private static void UpdateDisplayType(DependencyObject s, DependencyPropertyChangedEventArgs e)
         {
-            var question = e.NewValue as BingoQuestion;
-
+            var question = (BingoQuestion) (e.Property.Name == nameof(Question) ? e.NewValue as BingoQuestion : s.GetValue(QuestionProperty));
+            
             if(question != null)
             {
                 QuestionDisplayerPossibilities newValue;
 
-                bool titleNullOrEmpty = string.IsNullOrEmpty(question.Title),
-                     titleImageNullOrEmpty = string.IsNullOrEmpty(question.TitleImagePath);
+                bool displayAnswerInstead = (bool) s.GetValue(DisplayAnswerInsteadOfTitleProperty),
+                     textNullOrEmpty = string.IsNullOrEmpty(displayAnswerInstead ? question.Answer : question.Title),
+                     imageNullOrEmpty = string.IsNullOrEmpty(displayAnswerInstead ? question.AnswerImagePath : question.TitleImagePath);
 
-                if (titleNullOrEmpty && titleImageNullOrEmpty)
+                if (textNullOrEmpty && imageNullOrEmpty)
                 {
                     newValue = QuestionDisplayerPossibilities.Invalid;
                 }
-                else if (titleNullOrEmpty)
+                else if (textNullOrEmpty)
                 {
                     newValue = QuestionDisplayerPossibilities.DisplayImageOnly;
                 }
-                else if (titleImageNullOrEmpty)
+                else if (imageNullOrEmpty)
                 {
                     newValue = QuestionDisplayerPossibilities.DisplayTextOnly;
                 }
@@ -55,7 +64,6 @@ namespace VirtualBingo.UI.Player.Views.Controls
 
                 s.SetValue(DisplayTypePropertyKey, newValue);
             }
-            
         }
     }
 }

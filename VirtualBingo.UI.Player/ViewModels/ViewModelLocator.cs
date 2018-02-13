@@ -1,5 +1,6 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
+using MahApps.Metro.Controls.Dialogs;
 using Microsoft.Practices.ServiceLocation;
 
 namespace VirtualBingo.UI.Player.ViewModels
@@ -28,6 +29,8 @@ namespace VirtualBingo.UI.Player.ViewModels
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
 
+            SimpleIoc.Default.Register<IDialogCoordinator, DialogCoordinator>();
+
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<MenuViewModel>();
             SimpleIoc.Default.Register<CreateGameViewModel>();
@@ -35,6 +38,7 @@ namespace VirtualBingo.UI.Player.ViewModels
             SimpleIoc.Default.Register<PlayViewModel>();
             SimpleIoc.Default.Register<PlayTabItemViewModel>();
             SimpleIoc.Default.Register<AnswersViewModel>();
+            SimpleIoc.Default.Register<GenerateCardsViewModel>();
         }
 
         public MainViewModel Main
@@ -90,6 +94,14 @@ namespace VirtualBingo.UI.Player.ViewModels
             get
             {
                 return ServiceLocator.Current.GetInstance<AnswersViewModel>();
+            }
+        }
+
+        public GenerateCardsViewModel GenerateCards
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<GenerateCardsViewModel>();
             }
         }
 

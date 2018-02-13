@@ -19,7 +19,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
+    <Grid Margin="5">
         <!-- <DockPanel Grid.Row="0" Margin="5" HorizontalAlignment="Stretch" LastChildFill="False">
             [XXX - IMPLEMENT LOGIN PAGE]
             

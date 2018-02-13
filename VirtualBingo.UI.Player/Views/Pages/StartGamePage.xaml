@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:controls="clr-namespace:VirtualBingo.UI.Player.Views.Controls"
       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:p="clr-namespace:VirtualBingo.UI.Player.Properties"
       mc:Ignorable="d" 
@@ -11,117 +11,23 @@
       Title="StartGamePage"
       DataContext="{Binding StartGame, Source={StaticResource Locator}}">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*" />
-            <RowDefinition Height="2*" />
-        </Grid.RowDefinitions>
+    <DockPanel VerticalAlignment="Top"
+               Margin="5">
+        <Button DockPanel.Dock="Bottom"
+                BorderThickness="1"
+                BorderBrush="LightGray"
+                Style="{DynamicResource SquareButtonStyle}"
+                Command="{Binding DataContext.LaunchGameCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}}"
+                CommandParameter="{Binding ElementName=GameChooser, Path=SelectedGame}"
+                IsEnabled="{Binding ElementName=GameChooser, Path=SelectedGame, Converter={StaticResource NullToBooleanConverter}}">
 
-        <Grid Grid.Row="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-
-            <StackPanel Grid.Row="0">
-                <DockPanel LastChildFill="False">
-                    <Button DockPanel.Dock="Right"
-                        BorderThickness="1"
-                        BorderBrush="LightGray"
-                        Style="{DynamicResource SquareButtonStyle}"
-                        Command="{Binding RefreshFiltersCommand}">
-
-                        <StackPanel Orientation="Horizontal">
-                            <iconPacks:PackIconMaterialLight Kind="Refresh" Width="15" Height="12" />
-                            <TextBlock Text="{x:Static p:Resources.START_GAME_ReloadAvaliable}" Margin="5 0" FontSize="10" />
-                        </StackPanel>
-                    </Button>
-
-                    <TextBlock DockPanel.Dock="Left"
-                               Text="{x:Static p:Resources.START_GAME_FilterOptions}"
-                               FontWeight="Bold" 
-                               FontSize="14"
-                               VerticalAlignment="Center"/>
-                </DockPanel>
-
-                <Grid Margin="0 5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="5" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="5" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <StackPanel Grid.Column="0">
-                        <TextBlock Text="{x:Static p:Resources.START_GAME_Language}" />
-
-                        <ComboBox Margin="0 5 0 0" 
-                              ItemsSource="{Binding AvaliableLanguages}" 
-                              Controls:TextBoxHelper.ClearTextButton="True"
-                              SelectedItem="{Binding FilterSelectedLanguage}" />
-                    </StackPanel>
-
-                    <StackPanel Grid.Column="2">
-                        <TextBlock Text="{x:Static p:Resources.START_GAME_Subject}" />
-
-                        <ComboBox Margin="0 5 0 0" 
-                          ItemsSource="{Binding AvaliableSubjects}" 
-                          Controls:TextBoxHelper.ClearTextButton="True"
-                          SelectedItem="{Binding FilterSelectedSubject}" />
-                    </StackPanel>
-
-                    <StackPanel Grid.Column="4">
-                        <TextBlock Text="{x:Static p:Resources.START_GAME_Topic}" />
-
-                        <ComboBox Margin="0 5 0 0" 
-                          ItemsSource="{Binding AvaliableTopics}" 
-                          Controls:TextBoxHelper.ClearTextButton="True"
-                          SelectedItem="{Binding FilterSelectedTopic}" />
-                    </StackPanel>
-                </Grid>
+            <StackPanel Orientation="Horizontal">
+                <iconPacks:PackIconEntypo Kind="ControllerPlay" Width="15" Height="12" />
+                <TextBlock Text="{x:Static p:Resources.START_GAME_StartSelectedGame}" Margin="5 0" FontSize="10" />
             </StackPanel>
+        </Button>
 
-            <DockPanel Grid.Row="1"
-                   VerticalAlignment="Top">
-
-                <TextBlock DockPanel.Dock="Top"
-                       Text="{x:Static p:Resources.START_GAME_AvaliableGames}"
-                       FontWeight="Bold" 
-                       FontSize="14" />
-
-                <Button DockPanel.Dock="Bottom"
-                    BorderThickness="1"
-                    BorderBrush="LightGray"
-                    Style="{DynamicResource SquareButtonStyle}"
-                    Command="{Binding DataContext.LaunchGameCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}}"
-                    CommandParameter="{Binding ElementName=ListView_AvaliableGames, Path=SelectedItem}"
-                    IsEnabled="{Binding ElementName=ListView_AvaliableGames, Path=SelectedItem, Converter={StaticResource NullToBooleanConverter}}">
-
-                    <StackPanel Orientation="Horizontal">
-                        <iconPacks:PackIconEntypo Kind="ControllerPlay" Width="15" Height="12" />
-                        <TextBlock Text="{x:Static p:Resources.START_GAME_StartSelectedGame}" Margin="5 0" FontSize="10" />
-                    </StackPanel>
-                </Button>
-
-                <ListView x:Name="ListView_AvaliableGames"
-                      DockPanel.Dock="Top"
-                      VerticalAlignment="Top"
-                      Margin="0 10 0 5" 
-                      SelectionMode="Single"
-                      ItemsSource="{Binding FilteredAvaliableGames}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Height="35">
-                                <TextBlock Text="{Binding Topic}" FontSize="16" />
-
-                                <TextBlock Text="{Binding Subject}" VerticalAlignment="Bottom" />
-                                <TextBlock Text="{Binding Language}" HorizontalAlignment="Right" VerticalAlignment="Center" />
-                            </Grid>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </DockPanel>
-        </Grid>
-    </Grid>
+        <controls:GameChooser x:Name="GameChooser"
+                              DockPanel.Dock="Top" />
+    </DockPanel>
 </Page>

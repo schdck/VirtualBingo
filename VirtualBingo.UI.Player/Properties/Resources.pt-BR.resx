@@ -177,4 +177,39 @@
   <data name="GENERIC_UnderConstruction" xml:space="preserve">
     <value>Esta parte do aplicativo está em construção e deve estar disponível em breve.</value>
   </data>
+  <data name="GENERATE_CARDS_GenerateSelectedGame" xml:space="preserve">
+    <value>Gerar cartelas para o jogo selecionado</value>
+  </data>
+  <data name="GENERATE_CARDS_AmountOfCards" xml:space="preserve">
+    <value>Quantidade de cartelas</value>
+  </data>
+  <data name="GENERATE_CARDS_AmountOfQuestionsPerCard" xml:space="preserve">
+    <value>Quantidade de questões por cartela</value>
+  </data>
+  <data name="GENERIC_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="GENERIC_Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="GENERIC_ErrorLoadingGame" xml:space="preserve">
+    <value>Um erro ocorreu enquanto tentávamos carregar o jogo selecionado</value>
+  </data>
+  <data name="GENERIC_Success" xml:space="preserve">
+    <value>Sucesso</value>
+  </data>
+  <data name="GENERIC_Error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="GENERATE_CARDS_ErrorLoadingGame" xml:space="preserve">
+    <value>Um erro ocorreu enquanto tentávamos carregar o jogo selecionado.
+
+Para copiar mais informações sobre esse erro e obter ajuda, use o botão de copiar para o clipboard.</value>
+  </data>
+  <data name="GENERIC_FillNecessaryFields" xml:space="preserve">
+    <value>Você deve preencher todos os campos antes de continuar!</value>
+  </data>
+  <data name="GENERATE_CARDS_SuccessGenerating" xml:space="preserve">
+    <value>Suas cartelas foram geradas com sucesso!</value>
+  </data>
 </root>
