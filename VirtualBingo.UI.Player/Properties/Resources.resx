@@ -229,7 +229,9 @@
     <value>Question title image path</value>
   </data>
   <data name="CREATE_GAME_ErrorCreatingGame" xml:space="preserve">
-    <value />
+    <value>An error ocurred while trying to create the game.
+
+To copy more information about the error and get help, use the copy to clipboard button.</value>
   </data>
   <data name="CREATE_GAME_AuthorOfTheGame" xml:space="preserve">
     <value>Game author</value>
@@ -322,5 +324,10 @@ To copy more information about the error and get help, use the copy to clipboard
   </data>
   <data name="CREATE_GAME_CAPS_SaveGame" xml:space="preserve">
     <value>SAVE GAME</value>
+  </data>
+  <data name="START_GAME_ErrorStartingGame" xml:space="preserve">
+    <value>An error ocurred while trying to start the select game.
+
+To copy more information about the error and get help, use the copy to clipboard button.</value>
   </data>
 </root>

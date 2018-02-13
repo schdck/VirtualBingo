@@ -142,7 +142,9 @@ namespace VirtualBingo.UI.Player.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to An error ocurred while trying to create the game.
+        ///
+        ///To copy more information about the error and get help, use the copy to clipboard button..
         /// </summary>
         public static string CREATE_GAME_ErrorCreatingGame {
             get {
@@ -617,6 +619,17 @@ namespace VirtualBingo.UI.Player.Properties {
         public static string START_GAME_AvaliableGames {
             get {
                 return ResourceManager.GetString("START_GAME_AvaliableGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error ocurred while trying to start the select game.
+        ///
+        ///To copy more information about the error and get help, use the copy to clipboard button..
+        /// </summary>
+        public static string START_GAME_ErrorStartingGame {
+            get {
+                return ResourceManager.GetString("START_GAME_ErrorStartingGame", resourceCulture);
             }
         }
         

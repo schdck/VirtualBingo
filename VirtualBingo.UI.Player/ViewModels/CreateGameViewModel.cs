@@ -1,6 +1,9 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
+using SimpleDialogs;
+using SimpleDialogs.Controls;
+using SimpleDialogs.Enumerators;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -51,7 +54,14 @@ namespace VirtualBingo.UI.Player.ViewModels
                 }
                 catch(Exception e)
                 {
-                    // XXX Display exception
+                    DialogManager.ShowDialog(new AlertDialog()
+                    {
+                        AlertLevel = AlertLevel.Error,
+                        Title = Properties.Resources.GENERIC_Error,
+                        Message = Properties.Resources.CREATE_GAME_ErrorCreatingGame,
+                        ShowCopyToClipboardButton = true,
+                        Exception = e
+                    });
                 }
             });
 

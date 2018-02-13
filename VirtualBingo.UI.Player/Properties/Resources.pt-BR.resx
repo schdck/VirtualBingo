@@ -123,6 +123,11 @@
   <data name="CREATE_GAME_ErrorAddingQuestion" xml:space="preserve">
     <value>Insira pelo menos um título ou imagem do título e uma resposta ou imagem da resposta</value>
   </data>
+  <data name="CREATE_GAME_ErrorCreatingGame" xml:space="preserve">
+    <value>Um erro ocorreu enquanto tentávemos criar o jogo.
+
+Para copiar mais informações sobre esse erro e obter ajuda, use o botão de copiar para o clipboard.</value>
+  </data>
   <data name="CREATE_GAME_AuthorOfTheGame" xml:space="preserve">
     <value>Autor do jogo</value>
   </data>
@@ -214,5 +219,10 @@ Para copiar mais informações sobre esse erro e obter ajuda, use o botão de co
   </data>
   <data name="CREATE_GAME_CAPS_SaveGame" xml:space="preserve">
     <value>SALVAR O JOGO</value>
+  </data>
+  <data name="START_GAME_ErrorStartingGame" xml:space="preserve">
+    <value>Um erro ocorreu enquanto tentávamos iniciar o jogo selecionado.
+
+Para copiar mais informações sobre esse erro e obter ajuda, use o botão de copiar para o clipboard.</value>
   </data>
 </root>
