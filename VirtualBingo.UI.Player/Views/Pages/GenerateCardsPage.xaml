@@ -21,13 +21,13 @@
                 Command="{Binding GenerateCardsCommand}"
                 CommandParameter="{Binding ElementName=GameChooser, Path=SelectedGame}">
 
-            <!--<Button.IsEnabled>
+            <Button.IsEnabled>
                 <MultiBinding Converter="{StaticResource BooleanAndMultiConverter}">
                     <Binding ElementName="GameChooser" Path="SelectedGame" Converter="{StaticResource NullToBooleanConverter}" />
                     <Binding ElementName="AmountOfCards" Path="Value" Converter="{StaticResource NullToBooleanConverter}" />
                     <Binding ElementName="AmountOfQuestionsPerCard" Path="Value" Converter="{StaticResource NullToBooleanConverter}" />
                 </MultiBinding>
-            </Button.IsEnabled>-->
+            </Button.IsEnabled>
 
             <StackPanel Orientation="Horizontal">
                 <iconPacks:PackIconMaterial Kind="Cards" Width="15" Height="12" />
