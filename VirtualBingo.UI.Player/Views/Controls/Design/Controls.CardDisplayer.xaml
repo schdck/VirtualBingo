@@ -14,7 +14,8 @@
                         
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <UniformGrid Columns="{Binding AmountOfColumns, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:CardDisplayer}}}" />
+                                <UniformGrid Background="White"
+                                             Columns="{Binding AmountOfColumns, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type controls:CardDisplayer}}}" />
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         

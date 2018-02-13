@@ -11,6 +11,7 @@
     <local:ReduceValueConverter x:Key="ReduceValueConverter" />
     <local:IndexToNumberConverter x:Key="IndexToNumberConverter" />
     <local:NullOrWhiteSpaceToBooleanConverter x:Key="NullOrWhiteSpaceToBooleanConverter" />
+    <local:BooleanAndMultiConverter x:Key="BooleanAndMultiConverter" />
 
     <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 </ResourceDictionary>

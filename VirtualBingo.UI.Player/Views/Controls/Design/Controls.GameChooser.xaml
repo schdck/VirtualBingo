@@ -23,7 +23,7 @@
                                         Style="{DynamicResource SquareButtonStyle}"
                                         Command="{Binding RefreshFiltersCommand, RelativeSource={RelativeSource TemplatedParent}}">
 
-                                    <StackPanel Orientation="Horizontal">
+                                    <StackPanel Orientation="Horizontal" Margin="5 0">
                                         <iconPacks:PackIconMaterialLight Kind="Refresh" Width="15" Height="12" />
                                         <TextBlock Text="{x:Static p:Resources.START_GAME_ReloadAvaliable}" Margin="5 0" FontSize="10" />
                                     </StackPanel>

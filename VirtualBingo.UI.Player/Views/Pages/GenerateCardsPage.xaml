@@ -3,24 +3,65 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:VirtualBingo.UI.Player.Views.Pages"
+      xmlns:controls="clr-namespace:VirtualBingo.UI.Player.Views.Controls"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:p="clr-namespace:VirtualBingo.UI.Player.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="515" d:DesignWidth="750"
-      Title="GenerateCardsPage">
+      Title="GenerateCardsPage"
+      DataContext="{Binding GenerateCards, Source={StaticResource Locator}}">
 
-    <Grid>
-        <StackPanel VerticalAlignment="Center" 
-                    HorizontalAlignment="Center"
-                    xmlns:p="clr-namespace:VirtualBingo.UI.Player.Properties"
-                    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks">
-            
-            <iconPacks:PackIconModern Kind="TransitConstruction" 
-                                      Width="150" 
-                                      Height="150"
-                                      HorizontalAlignment="Center"
-                                      Margin="20"/>
-            
-            <TextBlock Text="{x:Static p:Resources.GENERIC_UnderConstruction}" />
-        </StackPanel>
-    </Grid>
+    <DockPanel VerticalAlignment="Top"
+               Margin="5">
+        <Button DockPanel.Dock="Bottom"
+                BorderThickness="1"
+                BorderBrush="LightGray"
+                Style="{DynamicResource SquareButtonStyle}"
+                Command="{Binding GenerateCardsCommand}"
+                CommandParameter="{Binding ElementName=GameChooser, Path=SelectedGame}">
+
+            <!--<Button.IsEnabled>
+                <MultiBinding Converter="{StaticResource BooleanAndMultiConverter}">
+                    <Binding ElementName="GameChooser" Path="SelectedGame" Converter="{StaticResource NullToBooleanConverter}" />
+                    <Binding ElementName="AmountOfCards" Path="Value" Converter="{StaticResource NullToBooleanConverter}" />
+                    <Binding ElementName="AmountOfQuestionsPerCard" Path="Value" Converter="{StaticResource NullToBooleanConverter}" />
+                </MultiBinding>
+            </Button.IsEnabled>-->
+
+            <StackPanel Orientation="Horizontal">
+                <iconPacks:PackIconMaterial Kind="Cards" Width="15" Height="12" />
+                <TextBlock Text="{x:Static p:Resources.GENERATE_CARDS_GenerateSelectedGame}" Margin="5 0" FontSize="10" />
+            </StackPanel>
+        </Button>
+
+        <Grid Margin="0 10" DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Controls:NumericUpDown x:Name="AmountOfCards" 
+                                    Grid.Column="0"
+                                    HorizontalContentAlignment="Left"
+                                    ButtonsAlignment="Left"
+                                    HasDecimals="False"
+                                    Minimum="1"
+                                    Value="{Binding AmountOfCards}"
+                                    Controls:TextBoxHelper.Watermark="{x:Static p:Resources.GENERATE_CARDS_AmountOfCards}" />
+
+            <Controls:NumericUpDown x:Name="AmountOfQuestionsPerCard"
+                                    Grid.Column="2"
+                                    HorizontalContentAlignment="Left"
+                                    ButtonsAlignment="Left"
+                                    HasDecimals="False"
+                                    Minimum="1"
+                                    Value="{Binding AmountOfQuestionsPerCard}"
+                                    Controls:TextBoxHelper.Watermark="{x:Static p:Resources.GENERATE_CARDS_AmountOfQuestionsPerCard}" />
+        </Grid>
+
+        <controls:GameChooser x:Name="GameChooser" 
+                              DockPanel.Dock="Top" />
+    </DockPanel>
 </Page>

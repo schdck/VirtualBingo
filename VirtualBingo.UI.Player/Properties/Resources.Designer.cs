@@ -196,6 +196,98 @@ namespace VirtualBingo.UI.Player.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amount of cards.
+        /// </summary>
+        public static string GENERATE_CARDS_AmountOfCards {
+            get {
+                return ResourceManager.GetString("GENERATE_CARDS_AmountOfCards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of questions per card.
+        /// </summary>
+        public static string GENERATE_CARDS_AmountOfQuestionsPerCard {
+            get {
+                return ResourceManager.GetString("GENERATE_CARDS_AmountOfQuestionsPerCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error ocurred while trying to load the select game.
+        ///
+        ///To copy more information about the error and get help, use the copy to clipboard button..
+        /// </summary>
+        public static string GENERATE_CARDS_ErrorLoadingGame {
+            get {
+                return ResourceManager.GetString("GENERATE_CARDS_ErrorLoadingGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate cards for the selected game.
+        /// </summary>
+        public static string GENERATE_CARDS_GenerateSelectedGame {
+            get {
+                return ResourceManager.GetString("GENERATE_CARDS_GenerateSelectedGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your cards were generated successfully!.
+        /// </summary>
+        public static string GENERATE_CARDS_SuccessGenerating {
+            get {
+                return ResourceManager.GetString("GENERATE_CARDS_SuccessGenerating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string GENERIC_Cancel {
+            get {
+                return ResourceManager.GetString("GENERIC_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string GENERIC_Error {
+            get {
+                return ResourceManager.GetString("GENERIC_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error ocurred while trying to load the select game..
+        /// </summary>
+        public static string GENERIC_ErrorLoadingGame {
+            get {
+                return ResourceManager.GetString("GENERIC_ErrorLoadingGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must fill all necessary fields before continuing!.
+        /// </summary>
+        public static string GENERIC_FillNecessaryFields {
+            get {
+                return ResourceManager.GetString("GENERIC_FillNecessaryFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        public static string GENERIC_Ok {
+            get {
+                return ResourceManager.GetString("GENERIC_Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Question answer.
         /// </summary>
         public static string GENERIC_QuestionAnswer {
@@ -228,6 +320,15 @@ namespace VirtualBingo.UI.Player.Properties {
         public static string GENERIC_QuestionTitleImagePath {
             get {
                 return ResourceManager.GetString("GENERIC_QuestionTitleImagePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Success.
+        /// </summary>
+        public static string GENERIC_Success {
+            get {
+                return ResourceManager.GetString("GENERIC_Success", resourceCulture);
             }
         }
         

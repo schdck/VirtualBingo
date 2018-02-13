@@ -11,7 +11,8 @@
       Title="StartGamePage"
       DataContext="{Binding StartGame, Source={StaticResource Locator}}">
 
-    <DockPanel VerticalAlignment="Top">
+    <DockPanel VerticalAlignment="Top"
+               Margin="5">
         <Button DockPanel.Dock="Bottom"
                 BorderThickness="1"
                 BorderBrush="LightGray"

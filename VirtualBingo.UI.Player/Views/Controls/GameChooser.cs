@@ -113,6 +113,22 @@ namespace VirtualBingo.UI.Player.Views.Controls
                 }
             };
 
+            PropertyChanged += (s, e) =>
+            {
+                if(e.PropertyName == nameof(FilterSelectedLanguage) && FilterSelectedLanguage != null && !AvaliableLanguages.Contains(FilterSelectedLanguage))
+                {
+                    FilterSelectedLanguage = null;
+                }
+                else if (e.PropertyName == nameof(FilterSelectedSubject) && FilterSelectedSubject != null && !AvaliableSubjects.Contains(FilterSelectedSubject))
+                {
+                    FilterSelectedSubject = null;
+                }
+                else if (e.PropertyName == nameof(FilterSelectedTopic) && FilterSelectedLanguage != null && !AvaliableTopics.Contains(FilterSelectedTopic))
+                {
+                    FilterSelectedTopic = null;
+                }
+            };
+
             LoadAvaliableGamesAndFilters();
 
             InitializeCommands();

@@ -24,35 +24,19 @@ namespace VirtualBingo.UI.Shared.Models
 
         public ObservableCollection<BingoQuestion> Questions { get; private set; }
 
-        [JsonConstructor]
-        private BingoGame(string subject, string topic, string language, string author, IEnumerable<BingoQuestion> questions)
-        {
-            Id = _CreatedGames++;
-
-            Subject = subject;
-            Topic = topic;
-            Language = language;
-            Author = author;
-
-            Random random = new Random();
-
-            // Shuffle the questions
-            Questions = new ObservableCollection<BingoQuestion>(questions.OrderBy(x => random.Next()));
-        }
-
         public static void CreateGameFile(string subject, string topic, string language, string author, IEnumerable<BingoQuestion> questions)
         {
             string gameDirectory = Path.Combine(GamesDirectoryHelper.GamesDirectory, language, subject);
             string gameFile = Path.Combine(gameDirectory, string.Format("{0}.zip", topic));
 
-            if(File.Exists(gameFile))
+            if (File.Exists(gameFile))
             {
                 throw new Exception("This game already exists");
             }
 
             List<BingoQuestion> copy = new List<BingoQuestion>();
 
-            foreach(BingoQuestion q in questions)
+            foreach (BingoQuestion q in questions)
             {
                 copy.Add(new BingoQuestion()
                 {
@@ -103,14 +87,14 @@ namespace VirtualBingo.UI.Shared.Models
                     {
                         string newPath;
 
-                        if(!generatedNames.TryGetValue(q.TitleImagePath, out newPath))
+                        if (!generatedNames.TryGetValue(q.TitleImagePath, out newPath))
                         {
                             newPath = Path.Combine(game._ImagesFolder, FileHelper.GenerateUniqueFileNameForPath(game._ImagesFolder, Path.GetExtension(q.TitleImagePath)));
 
                             generatedNames.Add(q.TitleImagePath, newPath);
 
                             File.Copy(q.TitleImagePath, newPath);
-                        }                        
+                        }
 
                         q.TitleImagePath = newPath;
                     }
@@ -144,7 +128,7 @@ namespace VirtualBingo.UI.Shared.Models
                     writer.Write(JsonConvert.SerializeObject(game, Formatting.Indented));
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw new Exception("Failed to serialize the game or write it to JSON", e);
             }
@@ -202,19 +186,74 @@ namespace VirtualBingo.UI.Shared.Models
             g._TemporaryFolder = temporaryFolder;
             g._ImagesFolder = Path.Combine(temporaryFolder, "Images");
 
-            foreach(BingoQuestion q in g.Questions)
+            foreach (BingoQuestion q in g.Questions)
             {
-                if(!string.IsNullOrEmpty(q.TitleImagePath))
+                if (!string.IsNullOrEmpty(q.TitleImagePath))
                 {
                     q.TitleImagePath = Path.Combine(g._ImagesFolder, q.TitleImagePath);
                 }
-                if(!string.IsNullOrEmpty(q.AnswerImagePath))
+                if (!string.IsNullOrEmpty(q.AnswerImagePath))
                 {
                     q.AnswerImagePath = Path.Combine(g._ImagesFolder, q.AnswerImagePath);
                 }
             }
 
             return g;
+        }
+
+        [JsonConstructor]
+        private BingoGame(string subject, string topic, string language, string author, IEnumerable<BingoQuestion> questions)
+        {
+            Id = _CreatedGames++;
+
+            Subject = subject;
+            Topic = topic;
+            Language = language;
+            Author = author;
+
+            Random random = new Random();
+
+            // Shuffle the questions
+            Questions = new ObservableCollection<BingoQuestion>(questions.OrderBy(x => random.Next()));
+        }
+
+        public IEnumerable<BingoCard> DistributeQuestions(int amountOfCards, int amountOfQuestionsPerCard)
+        {
+            List<BingoCard> cards = new List<BingoCard>();
+
+            Random random = new Random();
+
+            for (int i = 0; i < amountOfCards; i++)
+            {
+                cards.Add(new BingoCard(i + 1, amountOfQuestionsPerCard));
+            }
+
+            for (int i = 0, lastAddedCard = 0; i < amountOfQuestionsPerCard; i++)
+            {
+                Queue<BingoCard> queue = new Queue<BingoCard>(cards.OrderBy((x) => random.Next()));
+
+                while (queue.Count > 0)
+                {
+                    BingoCard currentCard = queue.Dequeue();
+
+                    while (currentCard.Contains(Questions[lastAddedCard]))
+                    {
+                        if (++lastAddedCard >= Questions.Count)
+                        {
+                            lastAddedCard = 0;
+                        }
+                    }
+
+                    currentCard.Add(Questions[lastAddedCard]);
+
+                    if (++lastAddedCard >= Questions.Count)
+                    {
+                        lastAddedCard = 0;
+                    }
+                }
+            }
+
+            return cards;
         }
     }
 }
