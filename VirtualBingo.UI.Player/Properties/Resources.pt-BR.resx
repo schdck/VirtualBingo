@@ -212,4 +212,7 @@ Para copiar mais informações sobre esse erro e obter ajuda, use o botão de co
   <data name="GENERATE_CARDS_SuccessGenerating" xml:space="preserve">
     <value>Suas cartelas foram geradas com sucesso!</value>
   </data>
+  <data name="CREATE_GAME_CAPS_SaveGame" xml:space="preserve">
+    <value>SALVAR O JOGO</value>
+  </data>
 </root>

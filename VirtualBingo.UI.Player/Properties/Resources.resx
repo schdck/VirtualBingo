@@ -320,4 +320,7 @@ To copy more information about the error and get help, use the copy to clipboard
   <data name="GENERIC_FillNecessaryFields" xml:space="preserve">
     <value>You must fill all necessary fields before continuing!</value>
   </data>
+  <data name="CREATE_GAME_CAPS_SaveGame" xml:space="preserve">
+    <value>SAVE GAME</value>
+  </data>
 </root>

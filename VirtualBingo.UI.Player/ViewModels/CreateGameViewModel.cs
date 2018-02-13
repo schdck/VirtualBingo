@@ -33,7 +33,6 @@ namespace VirtualBingo.UI.Player.ViewModels
         public string CurrentAnswerImagePath { get; set; }
 
         public string AddQuestionErrorMessage { get; private set; }
-        public string CreateGameErrorMessage { get; private set; }
 
         public CreateGameViewModel()
         {
@@ -49,12 +48,10 @@ namespace VirtualBingo.UI.Player.ViewModels
                 try
                 {
                     BingoGame.CreateGameFile(GameSubject, GameTopic, GameLanguage, GameAuthor, AddedQuestions);
-
-                    CreateGameErrorMessage = null;
                 }
                 catch(Exception e)
                 {
-                    CreateGameErrorMessage = e.Message;
+                    // XXX Display exception
                 }
             });
 

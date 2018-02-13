@@ -115,6 +115,15 @@ namespace VirtualBingo.UI.Player.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SAVE GAME.
+        /// </summary>
+        public static string CREATE_GAME_CAPS_SaveGame {
+            get {
+                return ResourceManager.GetString("CREATE_GAME_CAPS_SaveGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check this if the image is necessary to understand the question.
         /// </summary>
         public static string CREATE_GAME_CheckIfNecessary {

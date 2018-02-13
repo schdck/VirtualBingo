@@ -104,11 +104,22 @@
                          Command="{Binding AddImageCommand}"
                          CommandParameter="Answer"/>
 
-                <Button  Grid.Row="4"
-                         Grid.ColumnSpan="6"
-                         controls:ButtonHelper.PreserveTextCase="False"
-                         Content="{x:Static p:Resources.CREATE_GAME_CAPS_AddQuestion}"
-                         Command="{Binding AddQuestionCommand}" />
+                <Button Grid.Row="4"
+                        Grid.ColumnSpan="6"
+                        BorderThickness="1"
+                        BorderBrush="LightGray"
+                        Style="{DynamicResource SquareButtonStyle}"
+                        Command="{Binding AddQuestionCommand}">
+
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconEntypo Kind="AddToList"
+                                                  Width="15"
+                                                  Height="12" />
+                        <TextBlock Text="{x:Static p:Resources.CREATE_GAME_CAPS_AddQuestion}"
+                                   Margin="5 0"
+                                   FontSize="10" />
+                    </StackPanel>
+                </Button>
 
                 <StackPanel Grid.Row="5"
                             Grid.ColumnSpan="6"
@@ -126,12 +137,15 @@
 
         <DockPanel Grid.Row="2">
             <TextBlock DockPanel.Dock="Top"
-                       Text="{x:Static p:Resources.CREATE_GAME_AddedQuestions}" 
+                       Text="{x:Static p:Resources.CREATE_GAME_AddedQuestions}"
                        FontWeight="Bold"
                        FontSize="16"
                        Margin="0 0 0 5" />
 
-            <ListView ItemsSource="{Binding AddedQuestions}" BorderThickness="1" BorderBrush="Gray" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListView ItemsSource="{Binding AddedQuestions}"
+                      BorderThickness="1"
+                      BorderBrush="Gray"
+                      ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid Background="Transparent">
@@ -149,49 +163,67 @@
                                 <RowDefinition Height="5" />
                             </Grid.RowDefinitions>
 
-                            <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_Title}" FontWeight="Bold" />
+                            <StackPanel Grid.Row="1"
+                                        Grid.Column="0"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_Title}"
+                                           FontWeight="Bold" />
                                 <TextBlock Text="{Binding Title}" />
                             </StackPanel>
 
-                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_TitleImage}" FontWeight="Bold" />
+                            <StackPanel Grid.Row="1"
+                                        Grid.Column="1"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_TitleImage}"
+                                           FontWeight="Bold" />
                                 <TextBlock Text="{Binding TitleImagePath, Converter={StaticResource PathToFileNameConverter}}" />
                             </StackPanel>
 
-                            <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_ImageRequired}" FontWeight="Bold" />
+                            <StackPanel Grid.Row="1"
+                                        Grid.Column="2"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_ImageRequired}"
+                                           FontWeight="Bold" />
                                 <TextBlock Text="{Binding AlwaysDisplayTitleImage}" />
                             </StackPanel>
 
-                            <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_Answer}" FontWeight="Bold" />
+                            <StackPanel Grid.Row="3"
+                                        Grid.Column="0"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_Answer}"
+                                           FontWeight="Bold" />
                                 <TextBlock Text="{Binding Answer}" />
                             </StackPanel>
 
-                            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_AnswerImage}" FontWeight="Bold" />
+                            <StackPanel Grid.Row="3"
+                                        Grid.Column="1"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="{x:Static p:Resources.CREATE_GAME_AnswerImage}"
+                                           FontWeight="Bold" />
                                 <TextBlock Text="{Binding AnswerImagePath, Converter={StaticResource PathToFileNameConverter}}" />
                             </StackPanel>
 
                             <Button x:Name="Button_Remove"
-                                Style="{DynamicResource MetroCircleButtonStyle}"
-                                Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Page}, Path=DataContext.RemoveQuestionCommand}"
-                                CommandParameter="{Binding}"
-                                Content="{iconPacks:PackIconMaterial Kind=Close, Width=8, Height=8}"
-                                Visibility="Hidden"
-                                Foreground="Red"
-                                Width="26"
-                                Height="26"
-                                HorizontalAlignment="Right"
-                                Grid.RowSpan="4" 
-                                Grid.Column="3" />
+                                    Style="{DynamicResource MetroCircleButtonStyle}"
+                                    Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Page}, Path=DataContext.RemoveQuestionCommand}"
+                                    CommandParameter="{Binding}"
+                                    Content="{iconPacks:PackIconMaterial Kind=Close, Width=8, Height=8}"
+                                    Visibility="Hidden"
+                                    Foreground="Red"
+                                    Width="26"
+                                    Height="26"
+                                    HorizontalAlignment="Right"
+                                    Grid.RowSpan="4"
+                                    Grid.Column="3" />
 
                         </Grid>
 
                         <DataTemplate.Triggers>
-                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver, Mode=OneWay}" Value="True">
-                                <Setter Property="Visibility" Value="Visible" TargetName="Button_Remove" />
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver, Mode=OneWay}"
+                                         Value="True">
+                                <Setter Property="Visibility"
+                                        Value="Visible"
+                                        TargetName="Button_Remove" />
                             </DataTrigger>
                         </DataTemplate.Triggers>
                     </DataTemplate>
@@ -199,19 +231,24 @@
             </ListView>
         </DockPanel>
 
-        <StackPanel Grid.Row="4" Margin="0 5 0 0">
-            <Button Content="SAVE GAME"
-                Command="{Binding SaveGameCommand}"/>
+        <StackPanel Grid.Row="4"
+                    Margin="0 5 0 0">
 
-            <StackPanel Orientation="Horizontal" 
-                        Margin="0 5"
-                        Visibility="{Binding CreateGameErrorMessage, Converter={StaticResource NullToVisibilityConverter}}">
-                <iconPacks:PackIconModern Kind="WarningCircle" Foreground="Red"/>
+            <Button DockPanel.Dock="Bottom"
+                    BorderThickness="1"
+                    BorderBrush="LightGray"
+                    Style="{DynamicResource SquareButtonStyle}"
+                    Command="{Binding SaveGameCommand}">
 
-                <TextBlock Foreground="Red" 
-                               Margin="10 0"
-                               Text="{Binding CreateGameErrorMessage}" />
-            </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconEntypo Kind="Save"
+                                              Width="15"
+                                              Height="12" />
+                    <TextBlock Text="{x:Static p:Resources.CREATE_GAME_CAPS_SaveGame}"
+                               Margin="5 0"
+                               FontSize="10" />
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

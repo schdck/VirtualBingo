@@ -278,6 +278,10 @@ Para copiar mais informações sobre esse erro e obter ajuda, use o botão de co
           <source>Your cards were generated successfully!</source>
           <target state="final">Suas cartelas foram geradas com sucesso!</target>
         </trans-unit>
+        <trans-unit id="CREATE_GAME_CAPS_SaveGame" translate="yes" xml:space="preserve">
+          <source>SAVE GAME</source>
+          <target state="final">SALVAR O JOGO</target>
+        </trans-unit>
       </group>
     </body>
   </file>
